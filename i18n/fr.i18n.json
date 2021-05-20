@@ -1,0 +1,76 @@
+{
+  "lists": {
+    "makePrivate": {
+      "notLoggedIn": "Vous devez être connecté pour rendre des listes privées.",
+      "lastPublicList": "Vous ne pouvez pas rendre la dernière liste publique privée."
+    },
+    "makePublic": {
+      "notLoggedIn": "Vous devez être connecté.",
+      "accessDenied": "Vous n'êtes pas autorisé à modifier cette liste."
+    },
+    "updateName": {
+      "accessDenied": "Vous n'êtes pas autorisé à modifier cette liste."
+    },
+    "remove": {
+      "accessDenied": "'Vous n'êtes pas autorisé à supprimer cette liste.'",
+      "lastPublicList": "Vous ne pouvez pas supprimer la dernière liste publique.",
+      "confirm": "Etes-vous sûr de vouloir supprimer la liste"
+    },
+    "show": {
+      "cancel": "Annuler",
+      "showMenu": "Afficher le menu",
+      "selectAction": "Sélectionnez une action",
+      "makePublic": "Rendre public",
+      "makePrivate": "Rendre privé",
+      "delete": "Effacer",
+      "makeListPublic": "Rendre la liste publique",
+      "makeListPrivate": "Interdire la liste au public",
+      "deleteList": "Effacer la liste",
+      "typeToAdd": "Tapez pour ajouter de nouvelles tâches",
+      "noTasks": "Aucune tâche ici",
+      "addAbove": "Ajouter de nouvelles tâches ci-dessus",
+      "loading": "Chargement sauvé tâches..."
+    },
+    "insert": {
+      "list": "Liste"
+    }
+  },
+  "todos": {
+    "insert": {
+      "accessDenied": "Vous ne pouvez pas ajouter de tâche à une liste privée qui ne vous appartient pas"
+    },
+    "setCheckedStatus": {
+      "accessDenied": "Vous ne pouvez pas modifier de tâche dans une liste privée qui ne vous appartient pas"
+    },
+    "updateText": {
+      "accessDenied": "Vous ne pouvez pas modifier de tâche dans une liste privée qui ne vous appartient pas"
+    },
+    "remove": {
+      "accessDenied": "Vous ne pouvez pas supprimer de tâche dans une liste privée qui ne vous appartient pas"
+    },
+    "item": {
+      "taskName": "Nom de la tâche"
+    }
+  },
+  "useraccounts": {
+    "atTitle": {
+      "subtitle": "Se connecter permet d'avoir des listes privées"
+    }
+  },
+  "layouts": {
+    "appBody": {
+      "logout": "Se déconnecter",
+      "login": "Se connecter",
+      "join": "S'inscrire",
+      "newList": "Nouvelle liste",
+      "newListError": "La liste ne peut être créée",
+      "tryingToConnect": "Tentative de connexion",
+      "connectionIssue": "Il semble y avoir un problème de connexion"
+    }
+  },
+  "pages": {
+    "appNotFound": {
+      "pageNotFound": "Page introuvable"
+    }
+  }
+}

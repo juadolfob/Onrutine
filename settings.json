@@ -1,0 +1,8 @@
+{
+  "galaxy.meteor.com": {
+    "env": {
+      "MONGO_URL": "mongodb://pog:pog@cluster0-shard-00-00.6xhbb.mongodb.net:27017,cluster0-shard-00-01.6xhbb.mongodb.net:27017,cluster0-shard-00-02.6xhbb.mongodb.net:27017/messages?ssl=true&replicaSet=atlas-d1g4mx-shard-0&authSource=admin&retryWrites=true&w=majority",
+      "ROOT_URL": "http://criptttt.meteorapp.com/"
+    }
+  }
+}

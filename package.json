@@ -1,29 +1,81 @@
 {
-  "name": "simple-todos-react",
-  "private": true,
   "scripts": {
-    "start": "meteor run",
-    "test": "meteor test --once --driver-package meteortesting:mocha",
-    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
-    "visualize": "meteor --production --extra-packages bundle-visualizer"
+    "start": "meteor",
+    "pretest": "npm run lint --silent",
+    "test": "TEST_BROWSER_DRIVER=nightmare meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_BROWSER_DRIVER=nightmare meteor test --full-app --once --driver-package meteortesting:mocha",
+    "test-watch": "TEST_BROWSER_DRIVER=nightmare meteor test --driver-package meteortesting:mocha",
+    "test-app-watch": "TEST_BROWSER_DRIVER=nightmare meteor test --full-app --driver-package meteortesting:mocha",
+    "test-watch-terminal": "TEST_WATCH=1 TEST_BROWSER_DRIVER=nightmare meteor test --driver-package meteortesting:mocha",
+    "test-app-watch-terminal": "TEST_WATCH=1 TEST_BROWSER_DRIVER=nightmare meteor test --full-app --driver-package meteortesting:mocha",
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@babel/runtime": "^7.6.0",
-    "bcrypt": "^3.0.8",
-    "classnames": "^2.2.6",
-    "lodash": "^4.17.21",
-    "meteor-node-stubs": "^1.0.0",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0"
-  },
-  "meteor": {
-    "mainModule": {
-      "client": "client/main.jsx",
-      "server": "server/main.js"
-    },
-    "testModule": "tests/main.js"
+    "@babel/runtime": "^7.10.1",
+    "autoprefixer": "^6.4.1",
+    "babel-runtime": "^6.26.0",
+    "bcrypt": "^5.0.0",
+    "meteor-node-stubs": "^0.3.2"
   },
   "devDependencies": {
-    "chai": "^4.2.0"
+    "babel-eslint": "^6.1.2",
+    "eslint": "^3.7.0",
+    "eslint-config-airbnb": "^11.2.0",
+    "eslint-import-resolver-meteor": "^0.3.4",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-meteor": "^4.2.2",
+    "eslint-plugin-react": "^6.10.3",
+    "faker": "^5.5.3",
+    "nightmare": "^3.0.1",
+    "shell-source": "^1.1.0",
+    "shelljs": "^0.7.4"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "allowImportExportEverywhere": true
+    },
+    "plugins": [
+      "meteor"
+    ],
+    "extends": [
+      "airbnb",
+      "plugin:meteor/recommended"
+    ],
+    "rules": {
+      "import/no-extraneous-dependencies": "off",
+      "import/prefer-default-export": "off",
+      "no-underscore-dangle": "off",
+      "object-shorthand": [
+        "error",
+        "always",
+        {
+          "avoidQuotes": false
+        }
+      ],
+      "meteor/eventmap-params": [
+        "error",
+        {
+          "eventParamName": "event",
+          "templateInstanceParamName": "instance"
+        }
+      ],
+      "meteor/template-names": [
+        "off"
+      ]
+    },
+    "settings": {
+      "import/resolver": "meteor"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {
+        "browsers": [
+          "last 2 versions"
+        ]
+      }
+    }
   }
 }
